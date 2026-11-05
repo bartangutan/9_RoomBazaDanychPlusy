@@ -22,5 +22,9 @@ public class MainActivity extends AppCompatActivity {
                 getApplicationContext(), ZooDataBase.class, "zoo_db"
         ).allowMainThreadQueries()
                 .build();
+
+        zooDataBase.getZwierzeDao().wstawZwierzeDoBazy(
+                new Zwierze("Anna", 50, 2)
+        );
     }
 }
