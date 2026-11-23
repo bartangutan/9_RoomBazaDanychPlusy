@@ -102,6 +102,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        buttonAktualizuj.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        kliknieteZwierze.gatunek = editTextGatunek2.getText().toString();
+                        kliknieteZwierze.waga = Integer.parseInt(editTextWaga2.getText().toString());
+                        kliknieteZwierze.ileNog = Integer.parseInt(editTextIleNog2.getText().toString());
+
+                        zooDataBase.getZwierzeDao().zaktualizujDaneZwierzecia(kliknieteZwierze);
+                        buttonAktualizuj.setVisibility(View.INVISIBLE);
+                        arrayAdapter.notifyDataSetChanged();
+                    }
+                }
+        );
     }
 
 }
