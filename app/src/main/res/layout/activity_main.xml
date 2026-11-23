@@ -47,4 +47,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="EDYCJA REKORDU BAZY DANYCH" />
+
+    <EditText
+        android:id="@+id/editTextGatunek2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="ile nóg?" />
+
+    <EditText
+        android:id="@+id/editTextWaga2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="ile nóg?" />
+
+    <EditText
+        android:id="@+id/editTextIleNog2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="ile nóg?" />
+
+    <Button
+        android:id="@+id/buttonAktualizuj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aktualizuj" />
+
 </LinearLayout>

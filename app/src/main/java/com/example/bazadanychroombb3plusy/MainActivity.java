@@ -1,5 +1,7 @@
 package com.example.bazadanychroombb3plusy;
 
+import static android.view.View.INVISIBLE;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,8 +21,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ZooDataBase zooDataBase;
-    Button buttonDodaj;
-    EditText editTextGatunek, editTextWaga, editTextIleNog;
+    Button buttonDodaj, buttonAktualizuj;
+    EditText editTextGatunek, editTextWaga, editTextIleNog, editTextGatunek2, editTextWaga2, editTextIleNog2;
     ListView listView;
     List<Zwierze> zwierzeList;
     ArrayAdapter<Zwierze> arrayAdapter;
@@ -80,5 +82,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        editTextGatunek2 = findViewById(R.id.editTextGatunek2);
+        editTextWaga2 = findViewById(R.id.editTextWaga2);
+        editTextIleNog2 = findViewById(R.id.editTextIleNog2);
+        buttonAktualizuj = findViewById(R.id.buttonAktualizuj);
+        buttonAktualizuj.setVisibility(INVISIBLE);
+
+        listView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        kliknieteZwierze = zwierzeList.get(i);
+                        //wypelniony formularz
+                        editTextGatunek2.setText(kliknieteZwierze.gatunek);
+                        editTextWaga2.setText(kliknieteZwierze.waga+"");
+                        editTextIleNog2.setText(kliknieteZwierze.ileNog+"");
+
+                        buttonAktualizuj.setVisibility(View.VISIBLE);
+                    }
+                }
+        );
     }
+
 }
