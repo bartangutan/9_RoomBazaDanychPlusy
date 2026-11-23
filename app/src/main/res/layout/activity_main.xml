@@ -14,13 +14,6 @@
         android:text="Hello World!" />
 
     <EditText
-        android:id="@+id/editTextId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="id" />
-    <EditText
         android:id="@+id/editTextGatunek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +43,7 @@
         android:text="Dodaj do bazy" />
 
     <ListView
+        android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -17,4 +17,9 @@ public class Zwierze {
         this.waga = waga;
         this.ileNog = ileNog;
     }
+
+    @Override
+    public String toString() {
+        return "Id: "+id +", gatunek: "+ gatunek + ", waga: " + waga + ", ilość nóg: "+ ileNog;
+    }
 }
